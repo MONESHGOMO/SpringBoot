@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Monesh",
+      "role": "Full-Stack Developer",
+      "experience": "4 years",
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Harish",
+      "role": "UI/UX Designer",
+      "experience": "3 years",
+      "techStack": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "InVision"
+      ],
+      "id": "e69d"
+    },
+    {
+      "id": 11,
+      "name": "Peter",
+      "role": "Project Manager",
+      "experience": "8 years",
+      "techStack": [
+        "Agile",
+        "Scrum",
+        "JIRA",
+        "Confluence"
+      ]
+    },
+    {
+      "id": "72f5",
+      "name": "Dinesh",
+      "role": "Quality Assurance Engineer",
+      "experience": "3 years",
+      "techStack": [
+        "Selenium",
+        "Jenkins",
+        "JUnit",
+        "TestNG"
+      ]
+    }
+  ]
+}
