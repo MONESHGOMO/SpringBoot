@@ -91,8 +91,6 @@ The **Java Virtual Machine (JVM)** is the engine that runs Java applications. It
 
 ---
 
-### Diagram: JVM Architecture
-```text
 +---------------------------------+
 |         Java Application        |
 +---------------------------------+
@@ -104,19 +102,19 @@ The **Java Virtual Machine (JVM)** is the engine that runs Java applications. It
                   |
                   V
 +---------------------------------+
-|         Bytecode (.class)       |
+|         Bytecode (.class)      |
 +---------------------------------+
                   |
                   V
-+---------------------------------------------+
-|               Java Virtual Machine (JVM)   |
-|---------------------------------------------|
-|  Class Loader  |  Memory Areas  | Execution Engine  |
-|---------------------------------------------|
-| Method Area    | Heap           | Interpreter       |
-| Stack          | PC Register    | JIT Compiler      |
-| Native Method Stack             | Garbage Collector |
-+---------------------------------------------+
++-----------------------------------------------+
+|               Java Virtual Machine (JVM)     |
+|-----------------------------------------------|
+|  Class Loader     |   Memory Areas    |  Execution Engine  |
+|-----------------------------------------------|
+|  Method Area      |   Heap            |   Interpreter      |
+|  Stack            |   PC Register    |   JIT Compiler     |
+|  Native Method Stack |                 |   Garbage Collector|
++-----------------------------------------------+
                   |
                   V
 +---------------------------------+
