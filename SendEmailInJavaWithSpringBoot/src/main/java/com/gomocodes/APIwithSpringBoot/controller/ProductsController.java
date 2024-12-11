@@ -32,7 +32,7 @@ public class ProductsController {
     public ResponseEntity<List<Electronics>> getAllProducts() {
         try {
             logger.info("All products are fetched from DB");
-            mailSender.sendEmailForGetAllData("moneshprogrammer@gmail.com","dmonesh198@gmail.com","Including JavaEmail Sender ","All Data Are Fetched From MySQL, for more stay connect my loving and respected connections.....");
+            mailSender.sendEmailForGetAllData("From email ID","To email ID","Including JavaEmail Sender ","All Data Are Fetched From MySQL, for more stay connect my loving and respected connections.....");
             return productService.getAllProducts();
         } catch (Exception e) {
             logger.error("Error fetching products from DB", e);
@@ -44,7 +44,7 @@ public class ProductsController {
     public ResponseEntity<Electronics> getElectricalProductByID(@PathVariable Long id) {
         try {
             logger.info("Products are fetched from DB based on the ID {}", id);
-            mailSender.sendEmailForGetDataByUsingID("moneshprogrammer@gmail.com","dmonesh198@gmail.com","Including JavaEmail Sender "," Data Are Fetched From MySQL using ID , for more stay connect my loving and respected connections.....");
+            mailSender.sendEmailForGetDataByUsingID("From email ID","To email ID","Including JavaEmail Sender "," Data Are Fetched From MySQL using ID , for more stay connect my loving and respected connections.....");
             return productService.getElectricalProductByID(id);
         } catch (Exception e) {
             logger.warn("Product with ID {} not found", id);
@@ -56,7 +56,7 @@ public class ProductsController {
     public ResponseEntity<Electronics> createElectronics(@RequestBody Electronics addElectronics) {
         try {
             logger.info("Products are inserted into DB: {}", addElectronics);
-            mailSender.sendEmailForPostMethodAccepted("moneshprogrammer@gmail.com","dmonesh198@gmail.com","Including JavaEmail Sender "," Data Are Fetched to  MySQL, for more stay connect my loving and respected connections.....");
+            mailSender.sendEmailForPostMethodAccepted("From email ID","To email ID","Including JavaEmail Sender "," Data Are Fetched to  MySQL, for more stay connect my loving and respected connections.....");
             return productService.insertElectronics(addElectronics);
         } catch (Exception exception) {
             logger.error("Error creating product: {}", addElectronics, exception);
@@ -80,7 +80,7 @@ public class ProductsController {
                 updatedProduct.setQuantityInStock(update.getQuantityInStock());
 
                 productService.insertElectronics(updatedProduct);
-                mailSender.sendEmailForDataUpdatedById("moneshprogrammer@gmail.com","dmonesh198@gmail.com"," JavaEmail Sender "," Data updated using ID and stored in  to  MySQL, for more stay connect my loving and respected connections.....");
+                mailSender.sendEmailForDataUpdatedById("From email ID","To email ID"," JavaEmail Sender "," Data updated using ID and stored in  to  MySQL, for more stay connect my loving and respected connections.....");
                 return new ResponseEntity<>(HttpStatus.ACCEPTED);
 
             }
@@ -89,7 +89,7 @@ public class ProductsController {
         }
         catch (Exception e) {
             logger.error("Error updating product with ID {}", id, e);
-            mailSender.sendEmailForDataUpdatedById("moneshprogrammer@gmail.com","dmonesh198@gmail.com"," JavaEmail Sender "," Something went wrong check the log message .....");
+            mailSender.sendEmailForDataUpdatedById("From email ID","To email ID"," JavaEmail Sender "," Something went wrong check the log message .....");
 
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -100,12 +100,12 @@ public class ProductsController {
         try {
             productService.deleteElectricalProductByID(id);
             logger.info("Deleted Product ID: {}", id);
-            mailSender.sendEmailForDataDeletedById("moneshprogrammer@gmail.com","dmonesh198@gmail.com"," JavaEmail Sender "," Data deleted using ID from the   MySQL, for more stay connect my loving and respected connections.....");
+            mailSender.sendEmailForDataDeletedById("From email ID","To email ID"," JavaEmail Sender "," Data deleted using ID from the   MySQL, for more stay connect my loving and respected connections.....");
 
             return new ResponseEntity<>("Product deleted successfully", HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             logger.error("Error deleting product with ID {}", id, e);
-            mailSender.sendEmailForDataDeletedById("moneshprogrammer@gmail.com","dmonesh198@gmail.com"," JavaEmail Sender "," Something went wrong check the log message .....");
+            mailSender.sendEmailForDataDeletedById("From email ID","To email ID"," JavaEmail Sender "," Something went wrong check the log message .....");
 
             return new ResponseEntity<>("Error deleting product", HttpStatus.INTERNAL_SERVER_ERROR);
         }
