@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Authentication</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; /* Light Grey */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+            margin-bottom: 60px; /* Space to avoid overlap with the callout box */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0056b3, #003a80);
+            transform: translateY(-3px);
+        }
+
+        /* Callout Box - Positioned at Bottom */
+        .callout-box {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f06292; /* Pink Background */
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            text-align: left;
+            width: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+        }
+
+        .callout-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .callout-box li {
+            margin: 10px 0;
+            font-weight: normal;
+            font-size: 1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect for Callout Box Text */
+        .callout-box li:hover {
+            color: #f8bbd0; /* Light pink color on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Secure Login</h1>
+    <p>Explore authentication & authorization with Spring Boot.</p>
+    <a href="http://localhost:8080/login" class="btn">Get Started</a>
+</div>
+
+<div class="callout-box">
+    <p>Special thanks to:</p>
+    <ul>
+        <li><strong>Kunal Kushwaha</strong> - Java</li>
+        <li><strong>Hareesh Rajendran</strong> - APIs</li>
+        <li><strong>Navin Reddy</strong> - Spring Boot</li>
+        <li><strong>Muhammed Afsal Villan</strong> - Spring Security</li>
+    </ul>
+</div>
+
+</body>
+</html>
